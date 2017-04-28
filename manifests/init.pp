@@ -1,12 +1,14 @@
 class testmodule {
   
   if $::environment == 'development' {
-  notice("The value is your $::environment")
+  Notify { "The environment is your $::environment" }
   }
 
-  if $facts[environment] == 'development' {
-  notice("Welcome to the $facts[environment]  $facts[role]")
+  if $role == 'web' {
+  Notify { "The role is (Webserver)  $role " : }
   }
 
-
+  if $role == 'db' {
+  Notify { "The role is (Database)  $role " : }
+  }
 }
