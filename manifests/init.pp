@@ -1,7 +1,7 @@
 class testmodule {
   
   if $::environment == 'development' {
-  Notify { "The environment is your $::environment" }
+  Notify { "The environment is your $::environment" : }
   }
 
   if $role == 'web' {
