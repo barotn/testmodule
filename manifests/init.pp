@@ -11,4 +11,9 @@ class testmodule {
   if $role == 'db' {
   Notify { "The role is (Database)  $role " : }
   }
+
+  if $region == 'eu-west' {
+  Notify { "The server is in Region $region " : }
+  }
+
 }
