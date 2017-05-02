@@ -1,11 +1,11 @@
 class testmodule {
   
-  if $provider == 'aw' {
-    Notify { "The provider is $provider AWS" : }
+  if $provider == 'aws' {
+  Notify { "The provider is $provider - AWS" : }
   }
 
-  if $provider == 'az' {
-    Notify { "The provider is $provider AZURE" : }
+  if $provider == 'azure' {
+  Notify { "The provider is $provider - AZURE" : }
   }
 
   if $::environment == 'development' {
