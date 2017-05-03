@@ -1,4 +1,4 @@
-class testmodule {
+class testmodule ($message = "Default Message") {
   
   if $provider == 'aws' {
   Notify { "The provider is $provider - AWS" : }
@@ -22,10 +22,12 @@ class testmodule {
 
   if $role == 'web' {
   Notify { "The role is (Webserver) $role " : }
+  Notify { "hiera('message')" :}
   }
 
   if $role == 'db' {
   Notify { "The role is (Database) $role " : }
+  Notify { "hiera('message')" :}
   }
 
   if $region == 'euwest' {
