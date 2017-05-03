@@ -22,12 +22,12 @@ class testmodule ($message = "Default Message") {
 
   if $role == 'web' {
   Notify { "The role is (Webserver) $role " : }
-  Notify { "hiera('message')" :}
+  Notify { hiera('message') :}
   }
 
   if $role == 'db' {
   Notify { "The role is (Database) $role " : }
-  Notify { "hiera('message')" :}
+  Notify { hiera('message') :}
   }
 
   if $region == 'euwest' {
