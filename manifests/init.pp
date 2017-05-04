@@ -1,11 +1,11 @@
 class testmodule ($message = "Default Message") {
   
   if $provider == 'aws' {
-  Notify { "The provider is $provider - AWS" : }
+  Notify { "The provider is - $provider" : }
   }
 
   if $provider == 'azure' {
-  Notify { "The provider is $provider - AZURE" : }
+  Notify { "The provider is - $provider" : }
   }
 
   if $environment == 'development' {
@@ -21,21 +21,21 @@ class testmodule ($message = "Default Message") {
   }
 
   if $role == 'web' {
-  Notify { "The role is (Webserver) $role " : }
+  Notify { "The role is $role server" : }
   Notify { hiera('message') :}
   }
 
   if $role == 'db' {
-  Notify { "The role is (Database) $role " : }
+  Notify { "The role is $role server" : }
   Notify { hiera('message') :}
   }
 
   if $region == 'euwest' {
-  Notify { "The server is in Region $region " : }
+  Notify { "The server is in $region Region " : }
   }
 
   if $region == 'eucentral' {
-  Notify { "The server is in Region $region " : }
+  Notify { "The server is in $region Region" : }
   }
 
 }
