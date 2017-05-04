@@ -1,3 +1,4 @@
+##testmodule
 class testmodule ($message = "Default Message") {
   
   if $provider == 'aws' {
@@ -21,21 +22,21 @@ class testmodule ($message = "Default Message") {
   }
 
   if $role == 'web' {
-  Notify { "The role is $role server" : }
-  Notify { hiera('message') :}
+# Notify { "The role is $role server" : }
+#  Notify { hiera('message') :}
   }
 
   if $role == 'db' {
-  Notify { "The role is $role server" : }
-  Notify { hiera('message') :}
+#  Notify { "The role is $role server" : }
+#  Notify { hiera('message') :}
   }
 
   if $region == 'euwest' {
-  Notify { "The server is in $region Region " : }
+#  Notify { "The server is in $region Region " : }
   }
 
   if $region == 'eucentral' {
-  Notify { "The server is in $region Region" : }
+#  Notify { "The server is in $region Region" : }
   }
 
 }
