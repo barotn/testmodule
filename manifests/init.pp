@@ -21,22 +21,22 @@ class testmodule ($message = "Default Message") {
   Notify { "The environment is $environment" : }
   }
 
-  if $role == 'web' {
+#  if $role == 'web' {
 # Notify { "The role is $role server" : }
 #  Notify { hiera('message') :}
-  }
+#  }
 
-  if $role == 'db' {
+#  if $role == 'db' {
 #  Notify { "The role is $role server" : }
 #  Notify { hiera('message') :}
-  }
+#  }
 
-  if $region == 'euwest' {
+#  if $region == 'euwest' {
 #  Notify { "The server is in $region Region " : }
-  }
+#  }
 
-  if $region == 'eucentral' {
+#  if $region == 'eucentral' {
 #  Notify { "The server is in $region Region" : }
-  }
+#  }
 
 }
