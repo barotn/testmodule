@@ -21,10 +21,10 @@ class testmodule ($message = "Default Message") {
   Notify { "The environment is $environment" : }
   }
 
-#  if $role == 'web' {
-# Notify { "The role is $role server" : }
-#  Notify { hiera('message') :}
-#  }
+  if $role == 'web' {
+  Notify { "The role is $role server" : }
+  Notify { hiera('message') :}
+  }
 
 #  if $role == 'db' {
 #  Notify { "The role is $role server" : }
